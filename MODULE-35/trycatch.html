@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 80vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        #container h1{
+            font-size: 50px;
+        }
+        #container div{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #age{
+            width: 80%;
+            height: 30px;
+            padding: 5px;
+        }
+        button{
+            height: 35px;
+            padding: 0 10px;
+            cursor: pointer;
+            border-radius: 6px;
+
+        }
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <h1>Create custom error using Try and Catch</h1>
+        <div>
+            <input type="text" id="age" placeholder="Enter age between 18-30">
+            <button onclick="checkage()" type="submit" >Submit</button>
+            
+        </div>
+        <p id="error"></p>
+    </section>
+    
+    
+
+
+
+
+
+
+    <script src="trycatch.js"></script>
+</body>
+</html>

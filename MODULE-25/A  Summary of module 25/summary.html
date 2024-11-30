@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Summary of Event handlers</title>
+</head>
+<body>
+  <h1>Explore DOM Handlers</h1>
+  <button type="submit" onclick="makePurple()">Make Purple BG</button>
+  <button type="submit" id="bg-blue">Make Blue BG</button>
+  
+  <input type="text" id="user-email">
+  
+  <script>
+    function makePurple(){
+      document.body.style.backgroundColor = 'purple';
+    }
+    
+    document.getElementById('bg-blue').addEventListener('click', function(){
+      document.body.style.backgroundColor = 'blue';
+      document.body.style.color = 'white';
+    });
+    
+    document.getElementById('user-email').addEventListener('keyup', function(event){
+      console.log(event.target.value);
+    });
+  </script>
+</body>
+</html>

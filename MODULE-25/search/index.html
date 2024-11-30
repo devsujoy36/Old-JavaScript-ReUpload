@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script>
+    window.tailwind = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <title></title>
+</head>
+<body>
+   
+  <div id="" class="flex mx-10 my-10 px-10 py-10 gap-5 justify-center flex-col border-solid border-8 rounded-xl">
+    <h1 id="output-display" class="text-4xl font-bold flex justify-center">
+      Hello world
+    </h1>
+    <input id="input-field" type="text" placeholder="Type here" class="input input-bordered input-error w-full rounded-xl text-2xl" />
+    <button id="delete-btn" class="btn btn-outline btn-accent text-2xl" disabled>Delete</button>
+  </div>
+  <script>
+    document.getElementById('input-field').addEventListener('keyup', function(event) {
+      const text = event.target.value;
+      const delButton = document.getElementById('delete-btn');
+      if (text === 'delete') {
+        delButton.removeAttribute('disabled');
+      } 
+      else {
+        delButton.setAttribute('disabled', true);
+      }
+    })
+    
+    document.getElementById('delete-btn').addEventListener('click', function() {
+      const output = document.getElementById('output-display');
+      output.style.display = 'none';
+    })
+  </script>
+  <script src="tailwind.config.js"></script>
+</body>
+</html>

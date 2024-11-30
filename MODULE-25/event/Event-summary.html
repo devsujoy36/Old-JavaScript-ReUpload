@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Final DOM Event Handlers</h1>
+
+    <h3 id="input-text-display">Default Text</h3>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update Text</button>
+
+
+
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnclick()">Handle Event by Add oncick function</button>
+    <button id="event-listener">Handl
+          even by addEventLIstener</button>
+
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const Update = document.getElementById('input-text-display');
+            Update.innerText = inputText;
+            inputField.value = '';
+
+        })
+
+        function handleOnclick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached onclick'
+        }
+
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add Event Listener button'
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

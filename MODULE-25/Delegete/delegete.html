@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <h1>Exploring Event Delegate</h1>
+  <section>
+    <ul id="list-container">
+      <li class="item item-1">Sujoy Das</li>
+      <li class="item item-2">Prince</li>
+      <li class="item item-3 ">Hridoy</li>
+      <li class="item item-4">Rifat</li>
+      <li class="item item-5">Shorif</li>
+      <li class="item item-6">Siam</li>
+    </ul>
+    <button id="btn-add-item">Add Item</button>
+  </section>
+  <script>
+    document.getElementById('list-container').addEventListener('click', function(event){
+        event.target.parentNode.removeChild(event.target);
+    })
+    
+    document.getElementById('btn-add-item').addEventListener('click',function(){
+      const listContainer = document.getElementById('list-container');
+      const li = document.createElement('li');
+      li.innerText = 'Brand New Item Added';
+      li.classList.add('item');
+      listContainer.appendChild(li)
+      
+      
+      
+    })
+  </script>
+</body>
+</html>

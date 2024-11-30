@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: gold;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: all 5ms ease-in-out;
+        }
+        button:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onclick="console.log('h1')">DOM er ajke special events</h1>
+
+    <div>
+        <h2>Font Family Test</h2>
+        <button onclick="document.body.style.fontFamily = 'Segoe UI' "> font Segoe UI</button>
+        <button onclick="document.body.style.fontFamily = 'Verdana' "> font Verdana</button>
+        <button onclick="document.body.style.fontFamily = 'Tahoma' ">font Tahoma</button>
+    </div>
+    <div>
+        <h2>Background Color Test</h2>
+        <button onclick="document.body.style.backgroundColor = 'red'">BG red</button>
+        <button onclick="document.body.style.backgroundColor = 'yellow'; document.body.style.color='black'">
+            BG yellow
+        </button>
+        <button onclick="document.body.style.backgroundColor = 'white'; document.body.style.color='black'">
+            BG white</button>
+        <button onclick="makeBlue()">BG Blue </button>
+        <button id="clickmepurple">BG Purple </button>
+    </div>
+    <div>
+        <h1>Onclick er moddhe function diye</h1>
+        <button id="bg-aqua">BG Aqua</button>
+    </div>
+    <br>
+    <div>
+        <!-- option 4 -->
+        <button id="make-pink">Make BG Pink</button>
+        <button id="make-green">Make BG Green</button>
+        <button id="make-goldenrod">Make bg goldenrod</button>
+    </div>
+
+
+
+
+
+    <!--
+    Rule1: inline js using onclick 
+    Rule2: internal js using script
+    Rule3: external js using script.js file and link in html file
+    
+    use of onclick
+    Rule1: onclick er moddhe statement declare 
+    Rule2: js file e variable er moddhe element er id get kore tar moddhe onclick e sorasori function call ba lekhha 
+    Rule3: conclick er moddhe funtion likhe er moddhe statement declare
+
+ -->
+
+    <script src="event.js"></script>
+</body>
+
+</html>

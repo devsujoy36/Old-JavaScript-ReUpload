@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Row CSS</title>
+  <style>
+    
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primaryColor : deeppink;
+  --headerColor : antiquewhite;
+  --mainBgColor: #F4F4F4;
+  --footerColor : darkblue;
+  
+}
+
+body{
+  
+}
+.navbar{
+  padding:6px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primaryColor);
+  color: black;
+  font-size: 30px;
+  font-style: bold;
+  border-bottom:.5px solid black;
+  border-radius: 10px;
+}
+.navbar-ul{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style:none;
+}
+.navbar-ul li{
+  
+  
+  
+}
+.navbar-ul li a{
+  padding: 5px 10px;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 1s linear ease-in-out;
+  
+}
+
+.navbar-ul li a:active{
+  background-color: var(--footerColor);
+  color: white;
+  
+}
+
+
+
+
+
+.header{
+  width: 100vw;
+  background-color: var(--headerColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.header-left{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.header-sale-fever{
+  margin: 15px;
+  font-weight: bold;
+}
+.header-price{
+  font-size: 40px;
+}
+.header-price-off{
+  color: deeppink;
+}
+.header-left-promo{
+  margin: 40px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.promo-code{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn{
+  background-color: var(--primaryColor);
+  padding: 8px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 1s linear ease-in-out;
+}
+.btn:active{
+  transform: scale(.9);
+}
+.header-right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-right img{
+  width:80%;
+}
+
+
+
+
+
+#main{
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 80px;
+  box-sizing: border-box;
+  background-color: var(--mainBgColor);
+}
+.section-container{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.left-section{
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+}
+.box-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+}
+.box{
+  padding:10px;
+  border:1px solid gray;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+}
+.img-container{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainBgColor);
+  border-radius: 10px;
+  padding:10px 0px;
+}
+.img-container img{
+  width: 50%;
+}
+.product-rating{
+  margin-top: 5px;
+}
+.product-name{
+  font-size: 18px;
+  margin: 5px;
+}
+.product-price{
+  margin-bottom: 10px;
+}
+
+
+
+
+.right-section{
+  margin-top: 33px;
+}
+.have-coupon-box{
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding:10px;
+}
+.input-btn-box {
+  margin-top: 10px;
+}
+#coupon-inputfield{
+  width: 50%;
+  padding:10px;
+  height: 12px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+#btn-apply{
+  background-color: var(--primaryColor);
+  padding: 5px 8px;
+  color: white;
+  
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 1s linear ease-in-out;
+}
+
+.buy-list-box{
+  background-color: white;
+  padding:10px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+.item-name-container{
+  
+}
+.item-name-list{
+  margin:5px;
+  padding-left: 20px;
+}
+.item-list-title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.item-name-list li{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.item-price-container{
+  
+}
+.item-price-list{
+  list-style: none;
+  margin: 5px;
+}
+.item-price-list li{
+  padding: 5px;
+}
+.btn-buy-now-container{
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-buy-now{
+  width: 100%;
+}
+
+
+
+.footer{
+  color: #fff;
+  background-color: var(--footerColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 19vh;
+  gap: 20px;
+  padding: 20px;
+}
+.footer-title{
+  
+}
+.footer-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  font-size: 30px;
+  
+}
+.footer-list li{
+  list-style: none;
+  font-size: 25px;
+}
+
+
+@media screen and (max-width: 576px){
+  .navbar{
+    flex-direction: column ;
+  }
+ .navbar-ul li a{
+   font-size: 20px;
+ }
+ .header{
+    height:70vh;
+    padding: 20px;
+    flex-direction: column-reverse;
+ }
+ .header-left{
+   width: 100%;
+ }
+ .btn{
+    
+  }
+  .header-right img{
+    width: 150%;
+  }
+  #main{
+    padding:20px;
+  }
+ .section-container {
+    grid-template-columns: 1fr;
+    
+ }
+  .box-container{
+    grid-template-columns: 1fr 1fr;
+  }
+ .footer-title{
+   font-size: 25px;
+ }
+ .footer-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+  }
+  .footer-list li {
+    font-size: 20px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h2>Summer Sale</h2>
+    <ul class="navbar-ul">
+      <li class=""><a id="nav-option" href="#">Home</a></li>
+      <li class=""><a id="nav-option" href="#">About</a></li>
+      <li class=""><a id="nav-option" href="#">Services</a></li>
+      <li class=""><a id="nav-option" href="#">Sales</a></l>
+      <li class=""><a id="nav-option" href="#">Log In</a></li>
+    </ul>
+  </nav>
+  <header class="header">
+    <div class="header-left">
+      <div class="">
+        <p class="header-sale-fever">---SALE FEVER---</p>
+        <h1 class="header-price">Purchase TK 5,000 or <br>
+          above & get
+          <span class="header-price-off">20% off</span>
+        </h1>
+        <div class="header-left-promo">
+          <p class="promo-code">Use Promo Code</p>
+          <button class="btn">SELL200</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-right">
+      <img class="" src="images/Summer 1.png" alt="">
+    </div>
+  </header>
+  
+  <main id="main">
+    <div class="section-container">
+      
+      <section class="left-section">
+        <div class="section-flex">
+          <h1 class="section-title">Kitchenware</h1>
+          <div class="kitchenware-section box-container">
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod1.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name1" class="product-name">Spone Sets</h2>
+              <p class="product-price"> <span id="product-price1">499.00</span> TK</p>
+              <button id="product-btn1" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box2">
+              <div class="img-container">
+                <img src="images/prod2.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name2" class="product-name">Cutting Board</h2>
+              <p class="product-price"><span id="product-price2">399.00</span> TK</p>
+              <button id="product-btn2" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box3">
+              <div class="img-container">
+                <img src="images/prod3.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name3" class="product-name">Hot Pot</h2>
+              <p class="product-price"><span id="product-price3">380.00</span> TK</p>
+              <button id="product-btn3" class="btn">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-flex">
+          <h1 class="section-title">Sportsware</h1>
+          <div class="sportsware-section box-container">
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod4.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name4" class="product-name">Sports Black Cap</h2>
+              <p class="product-price"><span id="product-price4">369.00</span> TK</p>
+              <button id="product-btn4" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod5.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name5" class="product-name">Full Jersey Set </h2>
+              <p class="product-price"><span id="product-price5">1599.00</span> TK</p>
+              <button id="product-btn5" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod6.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name6" class="product-name">Sports Cates</h2>
+              <p class="product-price"><span id="product-price6">1299.00</span> TK</p>
+              <button id="product-btn6" class="btn">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-flex">
+          <h1 class="section-title">Furniture</h1>
+          <div class="furniture-section box-container">
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod7.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name7" class="product-name">Single Relax Chair</h2>
+              <p class="product-price"><span id="product-price7">8999.00</span> TK</p>
+              <button id="product-btn7" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod8.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name8" class="product-name">Children Play</h2>
+              <p class="product-price"><span id="product-price8">8599.00</span> TK</p>
+              <button id="product-btn8" class="btn">Add To Cart</button>
+            </div>
+          
+            <div class="box box1">
+              <div class="img-container">
+                <img src="images/prod9.png" alt="images/prod1.png">
+              </div>
+              <h4 class="product-rating">★★★★★</h4>
+              <h2 id="product-name9" class="product-name">Flexible Sofa</h2>
+              <p class="product-price"><span id="product-price9">7999.00</span> TK</p>
+              <button id="product-btn9" class="btn">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="right-section">
+        <div class="have-coupon-box">
+          <h3 class="have-coupon">Have Coupon?</h3>
+          <div class="input-btn-box">
+            <input id="coupon-inputfield" type="text" placeholder="Coupon Code">
+            <button id="btn-apply" >Apply</button>
+          </div>
+        </div>
+        
+        <div class="buy-list-box">
+          <div class="item-name-container">
+            <h3 class="item-list-title">Item List</h3>
+            <hr>
+            <ol id="item-name-list" class="item-name-list">
+              
+              
+            </ol>
+            
+          </div>
+          <hr>
+          <div class="item-price-container">
+            <ul id="item-price-list" class="item-price-list">
+              <li>Total Amount: <span id="total-amount">00 </span>TK</li>
+              <li>Discount: <span id="discount">
+              00</span>TK</li>
+              <li>Total: <span id="total-price">00 </span> TK</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="btn-buy-now-container">
+            <button class="btn btn-buy-now">Buy Now</button>
+          </div>
+        </div>
+      </section> 
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <h2 class="footer-title">Contact</h2>
+    <ul class="footer-list">
+      <li>Facebook</li>
+      <li>YouTube</li>
+      <li>Twitter</li>
+      <li>Instagram</li>
+      <li>WhatsApp</li>
+    </ul>
+  </footer>
+  
+  
+  <script>
+    function getNameByElementId(elementId) {
+      let elementString = document.getElementById(elementId);
+      let element = elementString.innerText;
+      return element;
+    }
+
+    function getPriceByElementId(priceId) {
+      let priceString = document.getElementById(priceId);
+      let priceValue = priceString.innerText;
+      let price = parseFloat(priceValue);
+      return price;
+    }
+
+    function setNameByElementId(productName) {
+      let itemNameList = document.getElementById('item-name-list');
+      let li = document.createElement('li');
+      li.innerText = productName;
+      itemNameList.appendChild(li);
+    }
+
+    function setPriceByElement(elementId,productPrice) {
+      let totalAmount = getPriceByElementId(elementId);
+      let sum = totalAmount + productPrice;
+      let totalDisplay = document.getElementById(elementId);
+      totalDisplay.innerText = sum;
+    }
+    
+   
+    
+    document.getElementById('product-btn1').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name1');
+      let productPrice = getPriceByElementId('product-price1');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+
+    document.getElementById('product-btn2').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name2');
+      let productPrice = getPriceByElementId('product-price2');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+
+    document.getElementById('product-btn3').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name3');
+      let productPrice = getPriceByElementId('product-price3');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn4').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name4');
+      let productPrice = getPriceByElementId('product-price4');
+      setNameByElementId(productName); 
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn5').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name5');
+      let productPrice = getPriceByElementId('product-price5');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn6').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name6');
+      let productPrice = getPriceByElementId('product-price6');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn7').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name7');
+      let productPrice = getPriceByElementId('product-price7');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn8').addEventListener('click', function() {
+
+      let productName = getNameByElementId('product-name8');
+      let productPrice = getPriceByElementId('product-price8');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('product-btn9').addEventListener('click', function() {
+      let productName = getNameByElementId('product-name9');
+      let productPrice = getPriceByElementId('product-price9');
+      setNameByElementId(productName);
+      setPriceByElement('total-amount', productPrice)
+      setPriceByElement('total-price', productPrice)
+    })
+
+
+
+    document.getElementById('coupon-inputfield').addEventListener('click',function(event){
+      let couponInputValue = document.getElementById('coupon-inputfield').value;
+      
+      let btnApply = document.getElementById('btn-apply');
+      console.log(btnApply)
+  
+      if(couponInputValue === 'SELL200'){
+        btnApply.removeAttribute = 'disabled';
+      }
+      else{
+        btnApply.setAttribute = 'disabled';
+      }
+    })
+    
+    
+  </script>
+</body>
+</html>
